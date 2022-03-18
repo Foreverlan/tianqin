@@ -1,0 +1,358 @@
+body {
+    margin: 0;
+    font: 14px/1.6 Arial;
+    color: #1a2535;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+a:active {
+   text-decoration: none !important;
+}
+
+.row-flex-warp {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.column-flex-warp {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container {
+    width: 1440px;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 11;
+    height: 100px;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.header .left .logo, .footer .left .logo {
+    width: 105px;
+    height: 30px;
+    line-height: 30px;
+    background-color: red;
+    font-family: MyriadPro-Regular;
+    font-size: 12px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.header .warp {
+    padding: 0 150px;
+    height: 100%;
+}
+
+.header .right {
+    display: flex;
+    height: 40px;
+    background-color: #f92525;
+    border-radius: 2px;
+}
+
+.header .right .log-out {
+	font-family: Raleway-Bold;
+    font-size: 13px;
+    height: 40px;
+    line-height: 40px;
+	font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0px;
+	color: #ffffff;
+}
+
+.main {
+    position: relative;
+    margin-top: 100px;
+    padding: 70px 150px;
+    background-color: #F0FFFF;
+}
+
+.main > .row-flex-warp {
+    margin: 20px 0;
+}
+
+.main .row-flex-warp .first, .header .row-flex-warp .first {
+    align-items: start;
+    flex: 1;
+}
+
+.main .banner-box {
+    position: relative;
+    width: 560px;
+    height: 288px;
+    background-color: white;
+    overflow: hidden;
+    flex: 1;
+    margin-right: 20px;
+}
+
+.main .banner-box .imgs-box {
+    position: absolute;
+    width: 1680px;
+    height: 288px;
+    z-index: 1;
+}
+
+.main .banner-box .imgs-box img {
+    float: left;
+    width: 560px;
+    height: 288px;
+}
+
+.main .banner-box .buttons {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90px;
+    height: 10px;
+    z-index: 2;
+}
+
+.main .banner-box .buttons span {
+    margin-left: 5px;
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border: 1px solid white;
+    background-color: white;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+
+.main .banner-box .buttons span.focus{
+    height: 12px;
+}
+
+.main .banner-box .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    padding:0px 14px;
+    background-color: black;
+    font-size: 50px;
+    z-index: 2;
+    opacity: 0.3;
+    display: none;
+}
+
+.main .banner-box .arrow_left {
+    left: 10px;
+}
+
+.main .banner-box .arrow_right {
+    right: 10px;
+}
+
+.main .banner-box:hover .arrow {
+    display: block;
+}
+
+.main .table-box {
+    position: relative;
+    width: 560px;
+    height: 288px;
+    background-color: white;
+    justify-content: flex-start;
+}
+
+.main .table-box .table-top {
+    width: 100%;
+    height: 110px;
+    font-family: OpenSans;
+	font-size: 18px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #262b2e;
+    border-bottom: 1px solid rgb(38,43,46,.07);
+}
+
+.main .table-box .table-header {
+    padding: 30px 50px;
+    position: relative;
+    display: flex;
+	height: 12px;
+	font-family: OpenSans-Bold;
+	font-size: 14px;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 24px;
+	letter-spacing: 0px;
+	color: #262b2e;
+}
+
+.main .table-box table {
+    text-align: center;
+}
+
+.table-box table th {
+    width: 34px;
+	height: 10px;
+	font-family: OpenSans-Bold;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 24px;
+	letter-spacing: 0px;
+    color: #262b2e;
+    padding: 18px 0;
+}
+
+.table-box table td {
+    padding: 18px 0;
+}
+
+.table-header .time {
+    left: 22px;
+    width: 60px;
+    text-align: center;
+}
+
+.table-header .username {
+    left: 25%;
+    width: 60px;
+    text-align: center;
+}
+
+.table-header .time {
+    left: 75%;
+    width: 60px;
+    text-align: center;
+}
+
+.main .table-box .table-bottom{
+    width: 100%;
+    flex: 1;
+}
+
+.main .table-box .buttom {
+    font-family: OpenSans-Semibold;
+	font-size: 13px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #262b2e;
+    opacity: 0.7;
+    width: 95px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 2px;
+	border: solid 2px #262b2e;
+    text-align: center;
+}
+
+.column-flex-warp .content {
+    font-family: Raleway-Regular;
+	font-size: 30px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #262b2e;
+}
+
+.column-flex-warp .desc {
+	font-family: OpenSans;
+	font-size: 8px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #262b2e;
+	opacity: 0.7;
+}
+
+.panel-nav {
+    position: relative;
+    align-items: flex-end;
+}
+
+.panel-nav .item-box {
+    position: relative;
+    text-align: center;
+}
+
+.panel-nav .item-box .item {
+    position: relative;
+	font-family: OpenSans-Bold;
+    font-size: 13px;
+    line-height: 24px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+    color: #262b2e;
+    margin-left: 30px;
+}
+
+.left-chart {
+    flex: 1;
+    margin-right: 20px;
+}
+.left-chart, .right-chart {
+    width: 560px;
+    height: 330px;
+    background-color: white;
+    padding: 47px 30px 0 30px;
+}
+
+.month-chart {
+    width: 1140px;
+    height: 310px;
+    background-color: white;
+    padding: 33px 39px 12px 36px;
+}
+
+.footer {
+    background: #202124;
+    padding: 80px 150px;
+    border-bottom: 1px solid rgba(255,255,255,.04);
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.footer .first {
+    justify-self: start;
+}
+
+.footer .right {
+    margin-left: 77px;
+}
+
+.footer .right .cell-box {
+    padding-right: 120px;
+    align-items: flex-start;
+    height: 94px;
+}
+
+.footer .right .cell-box a {
+	font-family: Raleway-Bold;
+	font-size: 13px;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 28px;
+	letter-spacing: 0px;
+	color: #ffffff;
+}
+
+.footer .right .cell-box a.focus, .footer .right .cell-box a:hover {
+    border-bottom: 1px solid white;
+}

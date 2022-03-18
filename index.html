@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>测试考核</title>
+<link href="static/css/index.css" rel="stylesheet" type="text/css">
+
+<script src="static/js/api.js" type="text/javascript"></script>
+<script src="static/js/echarts.js" type="text/javascript"></script>
+<script src="static/js/index.js" type="text/javascript"></script>
+
+</head>
+    <div class="container">
+        <div class="header">
+            <div class="warp row-flex-warp">
+                <div class="left first">
+                    <div class="logo"><span>LOGO</span></div>
+                </div>
+                <div class="right">
+                    <div class="log-out"><span>LOG OUT</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="row-flex-warp">
+                <div class="column-flex-warp first">
+                    <span class="content">Audience Overview</span>
+                    <span class="desc">Roseville, CA</span>
+                </div>
+                <div class="row-flex-warp second panel-nav">
+                    <div class="item-box">
+                        <a href="javascript:;" class="item current"><span>DASHBOARD</span></a>
+                    </div>
+                    <div class="item-box">
+                        <a href="javascript:;" class="item"><span>PROJECTS</span></a>
+                    </div>
+                    <div class="item-box">
+                        <a href="javascript:;" class="item"><span>CALENDAR</span></a>
+                    </div>
+                    <div class="item-box">
+                        <a href="javascript:;" class="item"><span>MAILBOX</span></a>
+                    </div>
+                    <div class="item-box">
+                        <a href="javascript:;" class="item"><span>SETTINGS</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-flex-warp">
+                <div class="left banner-box" id="js-banner_box">
+                    <div class="imgs-box" id="js-banner_imgs_box">
+                        <img src="./static/images/1.png" alt="">
+                        <img src="./static/images/2.png" alt="">
+                        <img src="./static/images/3.jpg" alt="">
+                    </div>
+                    <div class="buttons" id="js-banner_btn_box">
+                        <span rel="banner_btn" class="focus"></span>
+                        <span rel="banner_btn"></span>
+                        <span rel="banner_btn"></span>
+                    </div>
+                    <a href="javascript:;" class="arrow arrow_left" id="js-banner_back">&lt;</a>
+                    <a href="javascript:;" class="arrow arrow_right" id="js-banner_next">&gt;</a>
+                </div>
+
+                <div class="right column-flex-warp table-box">
+                    <div class="row-flex-warp table-top">
+                        <span>Support Requests</span>
+                        <div class="buttom">View All</div>
+                    </div>
+                    <div class="column-flex-warp table-bottom">
+                        <table width="100%" border="0" cellspacing="0">
+                            <tr>
+                                <th width="40" class="cell time">TIME</th>
+                                <th width="255" class="cell username">USER NAME</th>
+                                <th width="75" class="cell status">STATUS</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>XX书本</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>XX文具盒</td>
+                                <td>8</td>
+                            </tr>
+                        </table>
+                        <!-- <div class="table-header">
+                            <div class="cell time">TIME</div>
+                            <div class="cell username">USER NAME</div>
+                            <div class="cell status">STATUS</div>
+                        </div>
+                        <div class="table-body">
+                            <ul>
+                                <li>
+                                    <div class="time-cell">
+                                        <span>9:45pm</span>
+                                    </div>
+                                    <div class="username-cell">
+                                        <span>info@design.com</span>
+                                    </div>
+                                    <div class="status-cell">
+                                        <div class="button status-cell">
+                                            <span>info@design.com</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row-flex-warp">
+                <div class="month-chart" id="js-month_chart">
+                </div>
+            </div>
+
+            <div class="row-flex-warp">
+                <div class="left left-chart" id="js-pie_chart">
+                </div>
+
+                <div class="right right-chart" id="js-vertical_chart">
+                </div>
+            </div>
+        </div>
+
+        <div class="footer row-flex-warp">
+            <div class="left first">
+                <div class="logo"><span>LOGO</span></div>
+            </div>
+            <div class="right row-flex-warp">
+                <div class="cell-box column-flex-warp">
+                    <a href="javascript:;" rel="nav"><span>NEWS</span></a>
+                    <a href="javascript:;" rel="nav"><span>CHANNELS</span></a>
+                    <a href="javascript:;" rel="nav"><span>OVERVIEW</span></a>
+                    <a href="javascript:;" rel="nav"><span>TIMELINE</span></a>
+                </div>
+                <div class="cell-box column-flex-warp">
+                    <a href="javascript:;" rel="nav"><span>SPORT</span></a>
+                    <a href="javascript:;" rel="nav"><span>CULTURE</span></a>
+                    <a href="javascript:;" rel="nav"><span>NATURE</span></a>
+                    <a href="javascript:;" rel="nav"><span>MUSIC</span></a>
+                </div>
+                <div class="cell-box column-flex-warp">
+                    <a href="javascript:;" rel="nav"><span>WEATHER</span></a>
+                    <a href="javascript:;" rel="nav"><span>AUTOS</span></a>
+                    <a href="javascript:;" rel="nav"><span>LOCAL</span></a>
+                    <a href="javascript:;" rel="nav"><span>SHOP</span></a>
+                </div>
+                <div class="cell-box column-flex-warp">
+                    <a href="javascript:;" rel="nav"><span>FUTURE</span></a>
+                    <a href="javascript:;" rel="nav"><span>FOOD</span></a>
+                    <a href="javascript:;" rel="nav"><span>EARTH</span></a>
+                    <a href="javascript:;" rel="nav"><span>TV</span></a>
+                </div>
+                <div class="cell-box column-flex-warp">
+                    <a href="javascript:;" rel="nav"><span>TRAVEL</span></a>
+                    <a href="javascript:;" rel="nav"><span>RADIO</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+<body>
+</body>
+</html>
