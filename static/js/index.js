@@ -8,6 +8,7 @@ window.onload = function () {
     let $bannerBack = document.getElementById('js-banner_back');
     let $bannerNext = document.getElementById('js-banner_next');
     let $navLink = document.querySelectorAll('[rel="nav"]');
+    let $topNavLink = document.querySelectorAll('[rel="top_nav"]');
     
     let getChartDataFunc = url => {
         return new Promise((resolve, reject) => {
@@ -136,21 +137,23 @@ window.onload = function () {
     }
 
     let changeBanner = (num) => {
-        let index = ((num % 3) + 3) % 3;
+        let bannerLen = $bannerBtns.length;
+        let index = ((num % bannerLen) + bannerLen) % bannerLen;
         $imgsBox.style.left = '-' + index * 560 + 'px';
 
-        for (let i = 0; i < $bannerBtns.length; i++) {
-            $bannerBtns[i].removeAttribute('class', 'focus');
+        for (let i = 0; i < bannerLen; i++) {
+            i == index ? $bannerBtns[i].setAttribute('class', 'focus') : $bannerBtns[i].removeAttribute('class', 'focus')
         }
-        $bannerBtns[index] && $bannerBtns[index].setAttribute('class', 'focus');
     }
     
     setBannerInterval();
+
     $bannerBox.addEventListener('mouseenter', function () {
         timer && clearInterval(timer);
 
         return false;
     })
+
     $bannerBox.addEventListener('mouseleave', function () {
         setBannerInterval();
 
@@ -184,11 +187,21 @@ window.onload = function () {
     if ($navLink && $navLink.length) {
         for(let i = 0; i < $navLink.length; i++) {
             $navLink[i].addEventListener('click', function () {
-                debugger
                 for(let j = 0; j < $navLink.length; j++) {
                     $navLink[j].removeAttribute('class', 'focus');
                 }
                 $navLink[i].setAttribute('class', 'focus');
+            })
+        }
+    }
+
+    if ($topNavLink && $topNavLink.length) {
+        for(let i = 0; i < $topNavLink.length; i++) {
+            $topNavLink[i].addEventListener('click', function () {
+                for(let j = 0; j < $topNavLink.length; j++) {
+                    $topNavLink[j].removeAttribute('class', 'focus');
+                }
+                $topNavLink[i].setAttribute('class', 'focus');
             })
         }
     }
