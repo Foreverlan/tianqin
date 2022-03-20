@@ -22,19 +22,20 @@ ul, li {
 .row-flex-warp {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
 .column-flex-warp {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
 .container {
     width: 1440px;
+    margin: 0 auto;
 }
 
 .header {
@@ -43,18 +44,25 @@ ul, li {
     right: 0;
     left: 0;
     z-index: 11;
+    width: 1440px;
     height: 100px;
-    width: 100%;
+    margin: 0 auto;
     background-color: #ffffff;
 }
 
-.header .left .logo, .footer .left .logo {
+.header .warp {
+    padding: 0 150px;
+    height: 100%;
+    text-align: center;
+}
+
+.header .warp .left-warp .logo, .footer .left .logo {
     width: 105px;
     height: 30px;
     line-height: 30px;
-    background-color: red;
+    background-color: #f92525;
     font-family: MyriadPro-Regular;
-    font-size: 12px;
+	font-size: 12px;
 	font-weight: normal;
 	font-stretch: normal;
 	letter-spacing: 1px;
@@ -62,13 +70,7 @@ ul, li {
     text-align: center;
 }
 
-.header .warp {
-    padding: 0 150px;
-    height: 100%;
-}
-
-.header .right {
-    flex-shrink: 0;
+.header .warp .right-warp {
     height: 40px;
 }
 
@@ -83,7 +85,7 @@ ul, li {
     display: inline-block;
     width: 18px;
     height: 18px;
-    margin: 11px 8px 11px 0;
+    margin: 11px 0;
     background-image: url(../images/icon_setting.svg);
     background-repeat: no-repeat;
 }
@@ -93,13 +95,12 @@ ul, li {
     display: inline-block;
     width: 18px;
     height: 18px;
-    margin: 11px 40px 11px 8px;
+    margin: 11px 40px 11px 19px;
     background-image: url(../images/icon_notic.svg);
     background-repeat: no-repeat;
-
 }
 
-.header .right .log-out {
+.header .warp .right-warp .log-out {
     position: relative;
     float: left;
     font-size: 13px;
@@ -112,7 +113,6 @@ ul, li {
     line-height: 40px;
 	background-color: #f92525;
     border-radius: 2px;
-    text-align: center;
 }
 
 .main {
@@ -122,13 +122,62 @@ ul, li {
     background-color: #F0FFFF;
 }
 
-.main > .row-flex-warp {
-    margin: 20px 0;
+.main > div {
+    margin-bottom: 20px;
 }
 
-.main .row-flex-warp .first, .header .row-flex-warp .first {
-    align-items: start;
-    flex: 1;
+.main .nav-box {
+    text-align: left;
+    margin-bottom: 60px;
+}
+
+.main .nav-box .audience-overview {
+	font-family: Raleway-Regular;
+	font-size: 30px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+    color: #262b2e;
+}
+
+.main .nav-box .audience-desc {
+	font-family: OpenSans;
+	font-size: 15px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #262b2e;
+	opacity: 0.7;
+}
+
+.panel-nav {
+    position: relative;
+    align-items: flex-end;
+}
+
+.panel-nav .item-box {
+    position: relative;
+    text-align: center;
+}
+
+.panel-nav .item-box a {
+    position: relative;
+	font-family: OpenSans-Bold;
+    font-size: 13px;
+    line-height: 24px;
+	font-weight: bold;
+	font-stretch: normal;
+	letter-spacing: 0px;
+    color: #262b2e;
+    margin-left: 30px;
+    padding: 7px 0;
+}
+
+.panel-nav .item-box a:hover {
+    border-bottom: 2px solid rgb(38, 43, 46, 0.1);
+}
+.panel-nav .item-box a.focus {
+    border-bottom: 2px solid rgb(38, 43, 46, 0.1);
 }
 
 .main .banner-box {
@@ -137,8 +186,6 @@ ul, li {
     height: 288px;
     background-color: white;
     overflow: hidden;
-    flex: 1;
-    margin-right: 20px;
 }
 
 .main .banner-box .imgs-box {
@@ -185,9 +232,9 @@ ul, li {
     top: 50%;
     transform: translateY(-50%);
     color: white;
-    padding:0px 14px;
+    padding: 3px 10px;
     background-color: black;
-    font-size: 50px;
+    font-size: 20px;
     z-index: 2;
     opacity: 0.3;
     display: none;
@@ -214,8 +261,9 @@ ul, li {
 }
 
 .main .table-box .table-top {
-    width: 100%;
-    height: 110px;
+    width: 460px;
+    padding: 0 50px;
+    height: 109px;
     font-family: OpenSans;
 	font-size: 18px;
 	font-weight: normal;
@@ -240,7 +288,6 @@ ul, li {
 	line-height: 24px;
 	letter-spacing: 0px;
     color: #262b2e;
-    padding-bottom: 22px;
 }
 
 .main .table-box .table-body {
@@ -297,69 +344,16 @@ ul, li {
     text-align: center;
 }
 
-.column-flex-warp .content {
-    font-family: Raleway-Regular;
-	font-size: 30px;
-	font-weight: normal;
-	font-stretch: normal;
-	letter-spacing: 0px;
-	color: #262b2e;
-}
-
-.column-flex-warp .desc {
-	font-family: OpenSans;
-	font-size: 8px;
-	font-weight: normal;
-	font-stretch: normal;
-	letter-spacing: 0px;
-	color: #262b2e;
-	opacity: 0.7;
-}
-
-.panel-nav {
-    position: relative;
-    align-items: flex-end;
-}
-
-.panel-nav .item-box {
-    position: relative;
-    text-align: center;
-}
-
-.panel-nav .item-box a {
-    position: relative;
-	font-family: OpenSans-Bold;
-    font-size: 13px;
-    line-height: 24px;
-	font-weight: bold;
-	font-stretch: normal;
-	letter-spacing: 0px;
-    color: #262b2e;
-    margin-left: 30px;
-    padding: 7px 0;
-}
-
-.panel-nav .item-box a:hover {
-    border-bottom: 2px solid rgb(38, 43, 46, 0.1);
-}
-.panel-nav .item-box a.focus {
-    border-bottom: 2px solid rgb(38, 43, 46, 0.1);
-}
-
-.left-chart {
-    flex: 1;
-    margin-right: 20px;
-}
 .left-chart, .right-chart {
     width: 560px;
     height: 330px;
     background-color: white;
-    padding: 47px 30px 0 30px;
+    padding-top: 47px;
 }
 
 .month-chart {
     width: 1140px;
-    height: 310px;
+    height: 305px;
     background-color: white;
     padding: 33px 39px 12px 36px;
 }
